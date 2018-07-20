@@ -26,7 +26,7 @@ export default {
 };
 </script>
 
-<style scope>
+<style scope lang="less">
 .nav {
   height: 3rem;
   display: flex;
