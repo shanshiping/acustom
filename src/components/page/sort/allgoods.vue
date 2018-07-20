@@ -1084,7 +1084,7 @@ export default {
 .pop-inner {
   width: 100%;
   position: fixed;
-  top: -14.5rem;
+  top: -14.7rem;
   z-index: 8;
   background-color: white;
 
