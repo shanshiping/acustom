@@ -28,7 +28,7 @@ export default {
 
 <style scope lang="less">
 .nav {
-  height: 3rem;
+  height: 98px;
   display: flex;
   text-align: center;
   position: fixed;
@@ -36,12 +36,14 @@ export default {
   width: 100%;
 }
 .navImg {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 58px;
+  height: 53px;
   vertical-align: -3px;
 }
 .nav-item {
   flex: 1;
+ font-family: pingFangSC-Light, sans-serif;
+ font-size: 24px;
   text-decoration: none;
   padding-top: 0.2rem;
 }
@@ -55,12 +57,12 @@ export default {
   color: black;
 }
 .nav-item {
-  background-size: 1.5rem 1.5rem;
-  background-position: 2.25rem 0.187rem;
+  background-position:  center 6px;
   background-repeat: no-repeat;
 }
 .home.nav-item {
   background-image: url("../../assets/img/bottomNav/home.png");
+  
 }
 .sort.nav-item {
   background-image: url("../../assets/img/bottomNav/sort.png");
@@ -70,11 +72,11 @@ export default {
 }
 .mine.nav-item {
   background-image: url("../../assets/img/bottomNav/mine.png");
-} 
+}
 .home.nav-item:hover,
 .home.nav-item:active {
   background-image: url("../../assets/img/bottomNav/home_on.png");
-} 
+}
 .sort.nav-item:hover,
 .sort.nav-item:active {
   background-image: url("../../assets/img/bottomNav/sort_on.png");
@@ -82,14 +84,13 @@ export default {
 .cart.nav-item:hover,
 .cart.nav-item:active {
   background-image: url("../../assets/img/bottomNav/buy_on.png");
-
 }
 .mine.nav-item:hover,
 .mine.nav-item:active {
   background-image: url("../../assets/img/bottomNav/mine_on.png");
 }
 .nav-item-name {
-  margin-top: 1.43rem;
+  margin-top: 66px;
 }
 </style>
 
