@@ -1,7 +1,7 @@
 <template>
     <section class="right">
         <section class="banner-inner">
-            <img src="@/assets/img/HOME/1-banner.png" alt="" class="banner-img">
+            <img src="@/assets/img/HOME/sort_banner.png" alt="" class="banner-img">
         </section>
         <section class="listShow" v-for="(goodsShowItem,goodsIndex) in goodsShow" :key="goodsIndex">
             <p class="listShow-name">{{goodsShowItem.kindsName}}</p>
@@ -12,9 +12,11 @@
                         <div class="name">{{item.name}}</div>
                     </div>
                     <div class="show lastShow">
-                        <router-link style="margin-top:3rem" to="/allgoods">
-                            <h2>+63</h2>
-                            <div>查看全部商</div>
+                        <router-link  to="/allgoods">
+                        <div class="lastShow_inner">
+                            <div class="quantity">+63</div>
+                            <div class="look">查看全部商品</div>
+                        </div>
                         </router-link>
                     </div>
                 </div>
@@ -122,79 +124,80 @@ export default {
   }
 };
 </script>
-<style scoped>
+<style scoped lang="less">
 .right {
-  width: 17rem;
+  width: 540px;
   float: right;
-}
-.leftTitle,
-.leftChildern {
-  height: 3rem;
-  line-height: 3rem;
-  text-align: center;
-  border-bottom: 1px solid #ccc;
-}
-.leftChildern {
-  background-color: rgb(243, 244, 245);
-}
-.leftChildern a{
-  color:black;
-
-}
-
-.leftChildern:hover,.leftChildern:hover{
-  border-left:3px solid black;
-}
-.banner-inner {
-  padding: 0.5rem;
-}
-.banner-img {
-  width: 100%;
-}
-.showInner {
-  display: flex;
-  justify-content: space-between;
-}
-.showInner .show {
-  font-size: 0.5rem;
-  height: 7rem;
-  width: 4.5rem;
-  display: inline-block;
-  text-align: center;
-  margin-left: 0.2rem;
-  margin-right: 0.2rem;
-  padding: 0.2rem;
-  margin-top: 0.2rem;
-}
-.showInner .show .name {
-  height: 2rem;
-  line-height: 2rem;
-  overflow: hidden;
-}
-.showInner .show .price {
-  height: 1rem;
-}
-
-.showInner .show .img {
-  width: 4.5rem;
-  height: 5rem;
-}
-.otherShows {
-  display: inline-block;
-
-  position: relative;
-}
-.lastShow {
-  position: absolute;
-  background-color: rgb(243, 243, 243);
-}
-.listShow {
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid rgba(180, 180, 180, 0.6);
-}
-.listShow-name{
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+  padding-left: 15px;
+  padding-right: 15px;
+margin-bottom: 50px;
+  .banner-inner {
+    .banner-img {
+      width: 100%;
+    }
+  }
+  .listShow {
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(180, 180, 180, 0.6);
+    .listShow-name {
+      font-family: pingFangSC-Medium sans-serif;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-size: 26px;
+    }
+    .showInner {
+      display: flex;
+      justify-content: space-between;
+      .otherShows {
+        display: inline-block;
+        position: relative;
+        .show {
+          height: 215px;
+          width: 170px;
+          display: inline-block;
+          text-align: center;
+          margin-right: 10px;
+          .name {
+            height: 20px;
+            width: 143px;
+            line-height: 20px;
+            overflow: hidden;
+            font-size: 18px;
+            margin: 0 auto;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            color: #666;
+          }
+          .price {
+            height: 1rem;
+          }
+          .img {
+            width: 166px;
+            height: 166px;
+          }
+        }
+        .show.lastShow {
+          position: absolute;
+          background-color: rgb(243, 243, 243);
+          width: 166px;
+          height: 166px;
+          .lastShow_inner {
+            margin-top: 50px;
+            .quantity {
+              font-size: 36px;
+              color: #191919;
+              font-family: pingFangSC-Medium sans-serif;
+            }
+            .look {
+              font-size: 18px;
+              color: #666;
+              font-family: pingFangSC-Medium sans-serif;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 </style>
 
