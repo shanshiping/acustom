@@ -56,22 +56,29 @@ export default {
   clear: both;
 }
 .left {
-  width: 6rem;
+  width: 170px;
   float: left;
   position: fixed;
 }
 .leftTitle,
 .leftChildern {
-  height: 3rem;
-  line-height: 3rem;
+  height: 98px;
+  line-height: 98px;
   text-align: center;
+  font-size: 26px;
 }
 .leftChildern:nth-child(1) {
   border-bottom: 1px solid #ccc;
 }
+.leftTitle{
+  font-family: pingFangSC-Bold, sans-serif;
+  border-right: 1px solid #f4f4f4;
+  border-bottom: 1px solid #f4f4f4;
+}
 .leftChildern {
   background-color: rgb(243, 244, 245);
-  border-left: 3px solid transparent;
+  border-left: 6px solid transparent;
+  font-family: pingFangSC-Medium, sans-serif;
 }
 .leftChildern a {
   color: black;
@@ -79,11 +86,12 @@ export default {
 
 .leftChildern:hover,
 .leftChildern:hover {
-  border-left: 3px solid black;
+  border-left: 6px solid black;
 }
 .arrow {
-  width: 10px;
-  height: 8px;
+  width: 22px;
+  height: 12px;
   vertical-align: 0px;
+  margin-left: 5px;
 }
 </style>
