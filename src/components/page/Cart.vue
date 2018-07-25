@@ -105,7 +105,7 @@ export default {
         {
           img: require("@/assets/img/HOME/1-2.png"),
           name: "标准领缎纹标准领缎纹标准领缎纹标准领缎纹",
-          price: 11,
+          price: 1,
           size: "柯西西",
           count: 3,
           isChecked: false
@@ -212,7 +212,7 @@ export default {
 }
 .hasgoods {
   background-color: #f2f2f2;
-  padding-bottom: 100px;
+  padding-bottom: 150px;
   .hasgoods_item {
     background-color: #fff;
     backgroud-color: blue;
@@ -293,6 +293,9 @@ export default {
   .settlement_inner {
     width: 100%;
     background-color: #fff;
+    position:fixed;
+    bottom:98px;
+    border-bottom:1px solid #F0F0F0;
     .inner_right {
       float: right;
       width: 260px;
