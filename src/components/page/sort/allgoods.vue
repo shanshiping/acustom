@@ -20,7 +20,7 @@
         </div>
       </div>
       <div class="button-inner">
-        <div class="button" @click="reset">重置</div>
+        <div class="button" @click="reset" :class="{gray:isActive}">重置</div>
         <div class="button" @click="confirm">确定</div>
       </div>
     </div>
@@ -29,7 +29,7 @@
     <section class="kinds-inner">
       <div class="scroll">
         <ul class="gookinds">
-          <li class="kinds" v-for="(items,index) in kinds" @click="text(items.goods)" :key="index">{{items.name}}</li>
+          <li class="kinds" v-for="(items,index) in kinds" @click="text(items.goods)" :key="index"><span class="kinds_line">{{items.name}}</span></li>
         </ul>
       </div>
       <div class="filtrate" @click="screen">筛选</div>
@@ -40,7 +40,7 @@
           <div class="show" v-for="(item,index) in goods" :key="index">
             <img :src="item.img" alt="" class="img">
             <div class="name">{{item.name}}</div>
-            <div class="price">￥{{item.price|moneyFilter}}</div>
+            <div class="price">{{item.price|moneyFilter}}</div>
           </div>
         </div>
       </div>
@@ -52,6 +52,7 @@ import { toMoney } from "@/filter/moneyFilter.js";
 export default {
   data() {
     return {
+      isActive: true,
       kinds: [
         {
           name: "牛仔裤",
@@ -1020,7 +1021,7 @@ export default {
   },
   created() {
     this.goods = [].concat(this.kinds[0].goods);
-     this.resetdata =[].concat(this.kinds[0].goods)
+    this.resetdata = [].concat(this.kinds[0].goods);
   },
   methods: {
     text(items) {
@@ -1034,34 +1035,41 @@ export default {
       this.show = true;
     },
     confirm() {
+      this.isActive = true;
       this.show = false;
     },
     heightTobottom() {
+      this.isActive = false;
       return this.goods.sort((a, b) => {
         return b.price - a.price;
       });
     },
     bottomToHeight() {
+      this.isActive = false;
       return this.goods.sort((a, b) => {
         return a.price - b.price;
       });
     },
     farToNear() {
+      this.isActive = false;
       return this.goods.sort((a, b) => {
         return a.update - b.update;
       });
     },
     nearToFar() {
+      this.isActive = false;
       return this.goods.sort((a, b) => {
         return b.update - a.update;
       });
     },
     moreToLess() {
+      this.isActive = false;
       return this.goods.sort((a, b) => {
         return a.update - b.update;
       });
     },
     lessToMore() {
+      this.isActive = false;
       return this.goods.sort((a, b) => {
         return a.update - b.update;
       });
@@ -1084,44 +1092,57 @@ export default {
 .pop-inner {
   width: 100%;
   position: fixed;
-  top: -14.7rem;
+  top: -451px;
   z-index: 8;
   background-color: white;
 
   .popTitle {
     text-align: center;
-    margin-bottom: 0.5rem;
     border-bottom: 1px solid rgba(180, 180, 180, 0.6);
-    height: 3rem;
-    line-height: 3rem;
+    height: 80px;
+    line-height: 80px;
+    font-size: 32px;
+    color: #333;
+    font-family: pingFangSC-Medium sans-serif;
   }
 
   .optionInner {
-    padding: 1rem;
+    padding: 32px 16px;
     .optionRow {
-      margin-bottom: 0.5rem;
+      margin-bottom: 34px;
       .optionTitle,
       .option {
         display: inline-block;
-        width: 6rem;
       }
       .optionTitle {
         text-align: left;
-        color: rgba(180, 180, 180, 0.9);
+        color: #333;
+        font-size: 28px;
+        font-family: pingFangSC-Medium sans-serif;
+        width: 140px;
+        margin-right: 100px;
       }
       .option {
+        width: 146px;
+        height: 46px;
+        line-height: 46px;
         text-align: center;
-        border: 1px solid black;
-        border-radius: 5px;
+        border: 1px solid #666;
+        border-radius: 6px;
+        font-size: 24px;
+        color: #666;
       }
       .option:nth-child(3) {
-        margin-left: 1rem;
+        margin-left: 74px;
       }
       .option:hover,
       .option:active {
-        background-color: black;
+        background-color: #222;
         color: white;
       }
+    }
+    .optionRow:nth-child(3) {
+      margin-bottom: 0;
     }
   }
   .button-inner {
@@ -1129,10 +1150,15 @@ export default {
     border-bottom: 1px solid rgba(180, 180, 180, 0.6);
     .button {
       display: inline-block;
-      width: 11.5rem;
+      width: 371px;
       text-align: center;
-      height: 3rem;
-      line-height: 3rem;
+      height: 90px;
+      line-height: 90px;
+      font-size: 28px;
+      font-family: pingFangSC-Medium sans-serif;
+    }
+    .button.gray {
+      color: #aaaaaa;
     }
     .button:nth-child(2) {
       border-left: 1px solid rgba(180, 180, 180, 0.6);
@@ -1156,60 +1182,74 @@ export default {
   background-color: white;
   width: 100%;
   .scroll {
-    width: 18.8rem;
+    width: 500px;
     overflow-y: scroll;
     display: inline-block;
     .gookinds {
       white-space: nowrap;
       .kinds {
         text-align: center;
-        width: 3.75rem;
-        line-height: 3.125rem;
-        height: 3.125rem;
+        width: 240px;
+        line-height: 80px;
+        height: 80px;
         display: inline-block;
-        color: rgba(180, 180, 180, 0.6);
-        border-bottom: 2px solid transparent;
+        color: #666;
+        font-size: 32px;
+        .kinds_line {
+          border-bottom: 2px solid transparent;
+        }
       }
       .kinds:hover {
-        border-bottom: 2px solid black;
-        color: black;
+        .kinds_line {
+          border-bottom: 2px solid #161616;
+        }
+        color: #333;
       }
     }
   }
   .filtrate {
     text-align: center;
-    width: 3.75rem;
-    line-height: 3.125rem;
-    height: 3.125rem;
+    width: 240px;
+    line-height: 80px;
+    height: 80px;
+    font-size: 32px;
+    color: #808183;
   }
 }
 .goods-inner {
-  padding-top: 3.125rem;
+  padding-top: 100px;
+  margin-bottom: 80px;
   .showInner {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 1rem;
+    margin-bottom: 20px;
     .show {
-      font-size: 0.5rem;
-      height: 7rem;
-      width: 10rem;
+      font-size: 24px;
+      height: 445px;
+      width: 347px;
       display: inline-block;
       text-align: center;
-      margin-left: 1.1rem;
-      margin-right: 0.1rem;
-      padding: 0.2rem;
-      margin-top: 0.2rem;
+      margin-left: 18px;
+      color: #666;
+      font-size: 24px;
+      background-color: #ffffff;
+      font-family: pingFangSC-Medium sans-serif;
       .name {
         height: 2rem;
         line-height: 2rem;
+        width: 190px;
+        margin: 0 auto;
         overflow: hidden;
+        margin-top: 10px;
       }
       .price {
-        height: 1rem;
+        margin-top: 10px;
       }
       .img {
-        width: 5rem;
-        height: 5rem;
+        width: 347px;
+        height: 344px;
+        border-radius: 10px;
+        box-shadow: 0px 5px 32px 0px rgba(0, 0, 0, 0.2);
       }
     }
   }
