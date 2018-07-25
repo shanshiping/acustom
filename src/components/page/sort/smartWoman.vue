@@ -130,7 +130,7 @@ export default {
   float: right;
   padding-left: 15px;
   padding-right: 15px;
-margin-bottom: 50px;
+  margin-bottom: 50px;
   .banner-inner {
     .banner-img {
       width: 100%;

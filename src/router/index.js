@@ -11,6 +11,8 @@ import customWoman from '@/components/page/sort/customWoman'
 import smartMan from '@/components/page/sort/smartMan'
 import smartWoman from '@/components/page/sort/smartWoman'
 import allgoods from '@/components/page/sort/allgoods'
+import goodsDetails from '@/components/page/sort/goodsDetails'
+
 Vue.use(Router)
 
 export default new Router({
@@ -55,6 +57,11 @@ export default new Router({
       path:'/allgoods',
       name:"全部商品",
       component:allgoods
+    },
+    {
+      path:'/goodsDetails',
+      name:"商品详情",
+      component:goodsDetails
     }
   ]
 })

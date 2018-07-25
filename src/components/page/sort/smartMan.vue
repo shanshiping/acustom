@@ -130,7 +130,7 @@ export default {
   float: right;
   padding-left: 15px;
   padding-right: 15px;
-margin-bottom: 50px;
+  margin-bottom: 50px;
   .banner-inner {
     .banner-img {
       width: 100%;
@@ -140,7 +140,7 @@ margin-bottom: 50px;
     padding-bottom: 20px;
     border-bottom: 1px solid rgba(180, 180, 180, 0.6);
     .listShow-name {
-      font-family: pingFangSC-Medium sans-serif;
+      font-family: pingFangSC-Medium;
       margin-top: 20px;
       margin-bottom: 20px;
       font-size: 26px;

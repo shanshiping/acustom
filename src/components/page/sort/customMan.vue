@@ -7,10 +7,10 @@
             <p class="listShow-name">{{goodsShowItem.kindsName}}</p>
             <div class="showInner">
                 <div class="otherShows">
-                    <div class="show" v-for="(item,index) in goodsShowItem.goods" :key="index">
+                    <router-link  to="/goodsDetails" class="show" v-for="(item,index) in goodsShowItem.goods" :key="index">
                         <img :src="item.img" alt="" class="img">
                         <div class="name">{{item.name}}</div>
-                    </div>
+                    </router-link>
                     <div class="show lastShow">
                         <router-link  to="/allgoods">
                         <div class="lastShow_inner">
