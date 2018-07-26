@@ -188,24 +188,24 @@ export default {
           }
         }
       },
-      textDate: []
+      // textDate: []
     };
   },
-  created() {
-    axios({
-      url: "https://www.easy-mock.com/mock/5b585622fce1393a862d02d7/shop/main",
-      method: "get"
-    })
-      .then(response => {
-        console.log(response);
-        if (response.status == 200) {
-          this.textDate = response.data.data;
-        }
-      })
-      .catch(error => {
-        console.log(error);
-      });
-  },
+  // created() {
+  //   axios({
+  //     url: "https://www.easy-mock.com/mock/5b585622fce1393a862d02d7/shop/main",
+  //     method: "get"
+  //   })
+  //     .then(response => {
+  //       console.log(response);
+  //       if (response.status == 200) {
+  //         this.textDate = response.data.data;
+  //       }
+  //     })
+  //     .catch(error => {
+  //       console.log(error);
+  //     });
+  // },
   filters: {
     moneyFilter(money) {
       return toMoney(money);
