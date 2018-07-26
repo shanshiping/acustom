@@ -34,13 +34,13 @@
             <div class="firstShow">
               <img :src="clothesData.custom.show.firstShow.img" alt="" class="img">
               <div class="name">{{clothesData.custom.show.firstShow.name}}</div>
-              <div class="price">￥{{clothesData.custom.show.firstShow.price|moneyFilter}}</div>
+              <div class="price">{{clothesData.custom.show.firstShow.price|moneyFilter}}</div>
             </div>
             <div class="otherShows">
               <div class="show" v-for="(item,index) in clothesData.custom.show.otherShow" :key="index">
                 <img :src="item.img" alt="" class="img">
                 <div class="name">{{item.name}}</div>
-                <div class="price">￥{{item.price |moneyFilter}}</div>
+                <div class="price">{{item.price |moneyFilter}}</div>
               </div>
               <div class="show lastShow">
                 <div  class="lastShow-inner">
@@ -68,13 +68,13 @@
             <div class="firstShow">
               <img :src="clothesData.smart.show.firstShow.img" alt="" class="img">
               <div class="name">{{clothesData.smart.show.firstShow.name}}</div>
-              <div class="price">￥{{clothesData.smart.show.firstShow.price|moneyFilter}}</div>
+              <div class="price">{{clothesData.smart.show.firstShow.price|moneyFilter}}</div>
             </div>
             <div class="otherShows">
               <div class="show" v-for="(item,index) in clothesData.smart.show.otherShow" :key="index">
                 <img :src="item.img" alt="" class="img">
                 <div class="name">{{item.name}}</div>
-                <div class="price">￥{{item.price|moneyFilter}}</div>
+                <div class="price">{{item.price|moneyFilter}}</div>
               </div>
               <div class="show lastShow">
                 <div class="lastShow-inner">
