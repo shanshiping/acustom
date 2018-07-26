@@ -73,7 +73,7 @@ export default {
 .leftTitle{
   font-family: pingFangSC-Bold, sans-serif;
   border-right: 1px solid #f4f4f4;
-  border-bottom: 1px solid #f4f4f4;
+  border-bottom: 1px solid #f4f4f4; 
 }
 .leftChildern {
   background-color: rgb(243, 244, 245);

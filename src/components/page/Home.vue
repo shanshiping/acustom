@@ -92,7 +92,7 @@
 
 <script>
 import { toMoney } from "@/filter/moneyFilter.js";
-
+import axios from "axios";
 export default {
   data() {
     return {
@@ -187,8 +187,24 @@ export default {
             ]
           }
         }
-      }
+      },
+      textDate: []
     };
+  },
+  created() {
+    axios({
+      url: "https://www.easy-mock.com/mock/5b585622fce1393a862d02d7/shop/main",
+      method: "get"
+    })
+      .then(response => {
+        console.log(response);
+        if (response.status == 200) {
+          this.textDate = response.data.data;
+        }
+      })
+      .catch(error => {
+        console.log(error);
+      });
   },
   filters: {
     moneyFilter(money) {
