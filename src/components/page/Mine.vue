@@ -1,106 +1,125 @@
 <template>
-  <div>
-    <section class="banner">
-      <img class="bannerImg" src="@/assets/img/HOME/banner3.png" alt="">
-    </section>
-    <section class="operate">
-      <div class="operate_card">
-        <div class="information">
-          <img src="@/assets/img/HOME/banner3.png" alt="" class="buddha">
-          <span>阿狸</span>
+  <div class="mine">
+    <section>
+      <div class="banner"></div>
+      <div class="news_show">
+        <div class="self_show">
+          <img src="@/assets/img/HOME/banner3.png" alt="" class="avatar">
+          <span class="user_name">柯西西</span>
+          <span class="user_phone">18121069140</span>
+          <div class="integra_inner"><img src="@/assets/img/HOME/banner3.png" alt="" class="integra_img">签到领积分</div>
         </div>
-        <div class="state">
-          <ul>
-            <li class="stateItem">全部</li>
-            <li class="stateItem"></li>
-            <li class="stateItem">待付款</li>
-            <li class="stateItem"></li>
-            <li class="stateItem">待发货</li>
-            <li class="stateItem"></li>
-            <li class="stateItem">已发货</li>
-            <li class="stateItem"></li>
-            <li class="stateItem">已完成</li>
-          </ul>
+        <div class="reten_inner clearfix">
+          <div class="reten">
+            <span class="title">购买返现(元)</span>
+            <div class="amount">266.12</div>
+          </div>
+          <div class="button">
+            提现
+          </div>
         </div>
       </div>
-      <div class="other">
-        <ul>
-          <li class="otherItem"><img class="otherImg" src="@/assets/img/main/coupon.png" alt="">优惠券<img class="otherRight" src="@/assets/img/main/arrow_right.png" alt=""></li>
-          <li class="otherItem"><img class="otherImg" src="@/assets/img/main/size.png" alt="">我的尺寸<img class="otherRight" src="@/assets/img/main/arrow_right.png" alt=""></li>
-          <li class="otherItem"><img class="otherImg" src="@/assets/img/main/size.png" alt="">亲友尺寸<img class="otherRight" src="@/assets/img/main/arrow_right.png" alt=""></li>
-          <li class="otherItem"><img class="otherImg" src="@/assets/img/main/adress.png" alt="">我的地址<img class="otherRight" src="@/assets/img/main/arrow_right.png" alt=""></li>
-          <li class="otherItem"><img class="otherImg" src="@/assets/img/main/collection.png" alt="">我的收藏<img class="otherRight" src="@/assets/img/main/arrow_right.png" alt=""></li>
-        </ul>
-      </div>
     </section>
+    <section></section>
+    <section></section>
   </div>
 </template>
 <script>
 export default {};
 </script>
 <style scoped lang="less">
-.banner .bannerImg {
-  width: 100%;
-  height: 8rem;
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
 }
-.operate {
-  position: absolute;
-  top: 6.75rem;
-  left: 0;
-  right: 0;
-  padding: 0.5rem;
-  .operate_card {
-    border-radius: 6px;
-    padding-bottom: 0.5rem;
-    box-shadow: -4px 0px 16px 0px rgba(0, 0, 0, 0.08);
-    background-color: white;
+.mine {
+
+  .banner {
+    position: relative;
+    top:10px;
+    background-color: #373737;
+    border-bottom: 1px soild #373737;
+    height: 578px;
+    width: 1110;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-top-right-radius:50%;
+    border-top-left-radius:50%;
   }
-  .information {
-    height: 5rem;
-    line-height: 5rem;
-    .buddha {
-      width: 3rem;
-      height: 3rem;
-      border-radius: 50%;
-      vertical-align: -1.125rem;
-      margin-right: 1rem;
-      margin-left: 1rem;
-    }
-  }
-  .state {
-    font-size: 0;
-    .stateItem {
-      font-size: 1rem;
-      display: inline-block;
-      width: 4.3rem;
-      text-align: center;
-    }
-    .stateItem:nth-child(2n) {
-      background-color: rgba(180, 180, 180, 0.6);
-      width: 0.1rem;
-      height: 0.5rem;
-    }
-  }
-  .other {
-    margin-top: 1rem;
-    .otherItem {
-      border-bottom: 0.05rem solid rgba(180, 180, 180, 0.6);
-      height: 3rem;
-      line-height: 3rem;
+  .news_show {
+    padding: 10px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 150px;
+    margin: 35px;
+    .self_show {
+      width: 660px;
+      height: 120px;
       position: relative;
-      .otherImg {
-        width: 1.5rem;
-        height: 1.5rem;
-        vertical-align: -0.44rem;
-        margin-right: 0.5rem;
+      .avatar {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
       }
-      .otherRight {
-        width: 0.5rem;
-        height: 0.5rem;
-        vertical-align: 1px;
+      .user_name {
+        font-family: pingFangSC-Heavy;
+        color: #333;
+        font-size: 32px;
         position: absolute;
-        top: 1.3rem;
-        left: 21rem;
+        top: 20px;
+        margin-left: 20px;
+      }
+      .user_phone {
+        font-size: 28px;
+        color: #666;
+        font-family: pingFangSC-Medium;
+        position: absolute;
+        top: 70px;
+        margin-left: 20px;
+      }
+      .integra_inner {
+        display: inline-block;
+        color: #333;
+        position: absolute;
+        right: 2px;
+        top: 47px;
+        font-size: 24px;
+        .integra_img {
+          width: 32px;
+          height: 30px;
+          margin-right: 17px;
+          vertical-align: -5px;
+        }
+      }
+    }
+    .reten_inner {
+      margin-top: 30px;
+
+      .reten {
+        display: inline-block;
+        .title {
+          color: #666;
+          font-size: 24px;
+          font-family: pingFangSC-Medium;
+        }
+        .amount {
+          color: #333;
+          font-size: 48px;
+          font-weight: 600;
+          font-family: pingFangSC-Heavy;
+          margin-top: 28px;
+        }
+      }
+      .button {
+        display: inline-block;
+        color: #666;
+        font-size: 24px;
+        border: 1px solid #666;
+        padding: 14px 40px;
+        border-radius: 45px;
+        float: right;
+        margin-top: 20px;
       }
     }
   }
