@@ -5,7 +5,7 @@ import Home from '@/components/page/Home'
 import Sort from '@/components/page/Sort'
 import Cart from '@/components/page/Cart'
 import Mine from '@/components/page/Mine'
-
+import login from '@/components/page/sort/login'
 import customMan from '@/components/page/sort/customMan'
 import customWoman from '@/components/page/sort/customWoman'
 import smartMan from '@/components/page/sort/smartMan'
@@ -41,12 +41,17 @@ export default new Router({
           path: 'smartWoman',
           component: smartWoman
         },
+        
       ]
     },
     {
       path: '/cart',
       name: '购物车',
       component: Cart
+    },
+    {
+      path: '/login',
+      component: login
     },
     {
       path: '/mine',
