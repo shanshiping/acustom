@@ -4,7 +4,7 @@
       <div class="banner"></div> 
       <div class="news_show">
         <div class="self_show">
-          <img src="@/assets/img/main/avatar_no_login.png" alt="" class="avatar">
+          <img src="@/assets/img/main/not_login.png" alt="" class="avatar">
           <span class="user_name">柯西西</span>
           <span class="user_phone">18121069140</span>
           <div class="integra_inner"><img src="@/assets/img/main/integral.png" alt="" class="integra_img">签到领积分</div>
@@ -116,6 +116,7 @@ export default {};
 }
 .mine {
   background-color: #f3f3f3;
+  overflow: hidden;
   .news_inner {
     background-color: #FFFFFF;
     margin-bottom: 35px;
