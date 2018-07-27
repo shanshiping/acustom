@@ -20,20 +20,21 @@
         </div>
         <div class="course_inner">
           <div class="course">
+                <div class="course_item">53.2</div>
             <div class="course_title">可提现金额</div>
-            <div class="course_item">53.2</div>
+        
           </div>
           <div class="course">
-            <div class="course_title">交易中</div>
             <div class="course_item">89.66</div>
+            <div class="course_title">交易中</div>
           </div>
           <div class="course">
-            <div class="course_title">优惠券</div>
             <div class="course_item">12.23</div>
+            <div class="course_title">优惠券</div>
           </div>
           <div class="course">
-            <div class="course_title">我的积分</div>
             <div class="course_item">365</div>
+            <div class="course_title">我的积分</div>
           </div>
         </div>
       </div>
@@ -45,20 +46,20 @@
       </div>
       <div class="order_inner">
         <div class="order_item">
-          <img src="@/assets/img/main/unpaid.png" alt="">
-          <div>待支付</div>
+          <img src="@/assets/img/main/unpaid.png" class="order_img" alt="">
+          <div class="order_title">待支付</div>
         </div>
         <div class="order_item">
-          <img src="@/assets/img/main/unreceived.png" alt="">
-          <div>待收货</div>
+          <img src="@/assets/img/main/unreceived.png" class="order_img" alt="">
+          <div class="order_title">待收货</div>
         </div>
         <div class="order_item">
-          <img src="@/assets/img/main/no_evaluated.png" alt="">
-          <div>待评价</div>
+          <img src="@/assets/img/main/no_evaluated.png" class="order_img" alt="">
+          <div class="order_title">待评价</div>
         </div>
          <div class="order_item">
-          <img src="@/assets/img/main/after_sale.png" alt="">
-          <div>售后/退款</div>
+          <img src="@/assets/img/main/after_sale.png" class="order_img" alt="">
+          <div class="order_title">售后/退款</div>
         </div>
       </div>
       <div>
@@ -71,36 +72,35 @@
       </div>
       <div class="order_inner">
         <div class="order_item">
-          <img src="@/assets/img/main/adress.png" alt="">
-          <div>收货地址</div>
+          <img src="@/assets/img/main/adress.png" class="order_img" alt="">
+          <div class="order_title">收货地址</div>
         </div>
         <div class="order_item">
-          <img src="@/assets/img/main/placeholder_icon.png" alt="">
-          <div>我的收藏</div>
+          <img src="@/assets/img/main/collect.png" class="order_img" alt="">
+          <div class="order_title">我的收藏</div>
         </div>
         <div class="order_item">
-          <img src="@/assets/img/main/placeholder_icon.png" alt="">
-          <div>尺寸管理</div>
+          <img src="@/assets/img/main/size_management.png" class="order_img" alt="">
+          <div class="order_title">尺寸管理</div>
         </div>
          <div class="order_item">
-          <img src="@/assets/img/main/placeholder_icon.png" alt="">
-          <div>常见问题</div>
+          <img src="@/assets/img/main/question.png" class="order_img" alt="">
+          <div class="order_title">常见问题</div>
         </div>
          <div class="order_item">
-          <img src="@/assets/img/main/advice.png" alt="">
-          <div>意见反馈</div>
+          <img src="@/assets/img/main/advice.png" class="order_img" alt="">
+          <div class="order_title">意见反馈</div>
         </div>
         <div class="order_item">
-          <img src="@/assets/img/main/setting.png" alt="">
-          <div>设置</div>
+          <img src="@/assets/img/main/setting.png" class="order_img" alt="">
+          <div class="order_title">设置</div>
         </div>
          <div class="order_item">
-          <img src="@/assets/img/main/placeholder_icon.png" alt="">
-          <div>关于我们</div>
+          <img src="@/assets/img/main/about_us.png" class="order_img" alt="">
+          <div class="order_title">关于我们</div>
         </div>
       </div>
       <div>
-
       </div>
     </section>
   </div>
@@ -148,6 +148,7 @@ export default {};
           width: 120px;
           height: 120px;
           border-radius: 50%;
+          background-color: gray;
         }
         .user_name {
           font-family: pingFangSC-Heavy;
@@ -172,11 +173,12 @@ export default {};
           right: 2px;
           top: 47px;
           font-size: 24px;
+          font-weight: 300;
           .integra_img {
-            width: 32px;
-            height: 30px;
+            width: 40px;
+            height:40px;
             margin-right: 17px;
-            vertical-align: -5px;
+            vertical-align: -14px;
           }
         }
       }
@@ -190,6 +192,7 @@ export default {};
             color: #666;
             font-size: 24px;
             font-family: pingFangSC-Medium;
+            font-weight: 300;
           }
           .amount {
             color: #333;
@@ -207,6 +210,7 @@ export default {};
           padding: 14px 40px;
           border-radius: 45px;
           float: right;
+          font-weight: 300;
           margin-top: 50px;
         }
       }
@@ -219,6 +223,7 @@ export default {};
           .course_title {
             font-size: 24px;
             color: #333333;
+            font-weight: 300;
           }
           .course_item {
             font-size: 38px;
@@ -231,7 +236,7 @@ export default {};
     background-color: #FFFFFF;
     margin-bottom: 30px;
     padding-top: 30px;
-    padding-bottom: 30px;
+    // padding-bottom: 30px;
     .title_inner {
       height: 36px;
       line-height: 36px;
@@ -241,11 +246,13 @@ export default {};
       .title {
         font-size: 34px;
         color: #000;
+       
       }
       .show_all {
         font-size: 24px;
         color: #848383;
         float: right;
+        font-weight: 300;
         .show_all_img {
           vertical-align: -10px;
         }
@@ -260,6 +267,14 @@ export default {};
       .order_item {
         text-align: center;
         width: 165px;
+        .order_img{
+          width: 66px;
+          height: 66px;
+        }
+        .order_title{
+          font-size: 24px;
+           font-weight: 300;
+        }
       }
     }
     .order_inner:nth-child(2) {
