@@ -28,10 +28,10 @@
             <div class="course_item">89.66</div>
             <div class="course_title">交易中</div>
           </div>
-          <div class="course">
+          <router-link class="course" to="/coupons">
             <div class="course_item">12.23</div>
             <div class="course_title">优惠券</div>
-          </div>
+          </router-link>
           <div class="course">
             <div class="course_item">365</div>
             <div class="course_title">我的积分</div>

@@ -15,6 +15,8 @@ import smartWoman from '@/components/page/sort/smartWoman'
 import allgoods from '@/components/page/sort/allgoods'
 import goodsDetails from '@/components/page/sort/goodsDetails'
 
+import coupons from '@/components/page/main/coupons'
+
 Vue.use(Router)
 
 export default new Router({
@@ -58,17 +60,22 @@ export default new Router({
     {
       path: '/mine',
       name: '我的',
-      component: Mine
+      component: Mine,
     },
     {
-      path:'/allgoods',
-      name:"全部商品",
-      component:allgoods
+      path: '/coupons',
+      name: "全部商品",
+      component: coupons
     },
     {
-      path:'/goodsDetails',
-      name:"商品详情",
-      component:goodsDetails
+      path: '/allgoods',
+      name: "全部商品",
+      component: allgoods
+    },
+    {
+      path: '/goodsDetails',
+      name: "商品详情",
+      component: goodsDetails
     }
   ]
 })
