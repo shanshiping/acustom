@@ -6,6 +6,9 @@
     <router-link class="nav-item sort" to="/sort">
       <div class="nav-item-name">分类</div>
     </router-link>
+    <router-link class="nav-item share" to="/share">
+      <div class="nav-item-name">分享有礼</div>
+    </router-link>
     <router-link class="nav-item cart" to="/cart">
       <div class="nav-item-name">购物车</div>
     </router-link>
@@ -68,6 +71,14 @@ export default {
   }
   .mine.nav-item {
     background-image: url("../../assets/img/bottomNav/mine.png");
+  }
+  .share.nav-item{
+    border-radius: 50%;
+    background-image: url("../../assets/img/bottomNav/qr_code.png");
+  }
+  .share.nav-item:hover,
+  .share.nav-item:active {
+    background-image: url("../../assets/img/bottomNav/qr_code_on.png");
   }
   .home.nav-item:hover,
   .home.nav-item:active {
